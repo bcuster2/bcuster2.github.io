@@ -11,7 +11,7 @@ custom_js:
 ---
 
 
-# Use Vega-lite in Many Ways in Jekyll
+# Homework #10
 
 This project will show how to use vega-lite to make plots using different methods, and the vegachart tag from out plugins:
 
