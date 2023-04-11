@@ -21,12 +21,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Projects">
-  <meta property="og:description" content="Is this thing on?">
-  <meta property="og:image" content="https://cdn.vox-cdn.com/thumbor/q7-pGKxVJnXYTJTnrQL25Gz9QuY=/0x0:3982x2655/1200x800/filters:focal(1673x1010:2309x1646)/cdn.vox-cdn.com/uploads/chorus_image/image/69085545/usa_today_15769582.0.jpg">
+  <meta property="og:title" content="Vega Lite plots, multiple ways">
+  <meta property="og:description" content="Vega-lite plots using differnet methods.">
+  <meta property="og:image" content="assets/pngs/cars.png">
 
-  <title>Projects</title>
-  <meta name="description" content="Is this thing on?">
+  <title>Vega Lite plots, multiple ways</title>
+  <meta name="description" content="Vega-lite plots using differnet methods.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -72,43 +72,44 @@
   </div>
 
 </nav>
-    <div class="card-columns m-3 mt-5">
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="use-vega-lite-in-many-ways-in-jekyll">Use Vega-lite in Many Ways in Jekyll</h1>
 
-  <!-- Local Projects -->
-  <div class="wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/projects/1-vega-lite-project" class="project card text-themed"><img id="vega-lite-example-project-img" class="card-img-top" src="/assets/pngs/cars.png" alt="Vega Lite Example Project" /><div class="card-body">
-      <h5 id="vega-lite-example-project-name" class="card-title">Vega Lite Example Project
-      </h5>
-      <p id="vega-lite-example-project-desc" class="card-text">This is a "showcase" project that uses vega-lite for interactive viz!</p>
-      <p id="vega-lite-example-project-tools" class="card-text"><span class="badge badge-pill text-primary border border-primary ml-1">Python</span><span class="badge badge-pill text-primary border border-primary ml-1">HTML</span><span class="badge badge-pill text-primary border border-primary ml-1">vega-lite</span></p>
-    </div>
-  </a>
+<p>This project will show how to use vega-lite to make plots using different methods, and the vegachart tag from out plugins:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;vegachart schema-url="/assets/json/cars.json" style="width: 100%"&gt;&lt;/vegachart&gt;
+</code></pre></div></div>
+
+<h2 id="1-directly-from-vega-editor">1. Directly from vega-editor</h2>
+
+<vegachart schema-url="/assets/json/vega_editor_plot1.json" style="width: 100%"></vegachart>
+
+<!-- these are written in a combo of html and liquid -->
+
+<div class="left">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/vega/vega/blob/main/docs/data/cars.json">
+  The Data
+</a>
 </div>
 
-  <div class="wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/projects/2-vega-lite-plots-in-many-ways" class="project card text-themed"><img id="vega-lite-plots-multiple-ways-img" class="card-img-top" src="/assets/pngs/cars.png" alt="Vega Lite plots, multiple ways" /><div class="card-body">
-      <h5 id="vega-lite-plots-multiple-ways-name" class="card-title">Vega Lite plots, multiple ways
-      </h5>
-      <p id="vega-lite-plots-multiple-ways-desc" class="card-text">Vega-lite plots using differnet methods.</p>
-      <p id="vega-lite-plots-multiple-ways-tools" class="card-text"><span class="badge badge-pill text-primary border border-primary ml-1">Python</span><span class="badge badge-pill text-primary border border-primary ml-1">HTML</span><span class="badge badge-pill text-primary border border-primary ml-1">vega-lite</span><span class="badge badge-pill text-primary border border-primary ml-1">Altair</span></p>
-    </div>
-  </a>
+<div class="right">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb">
+  The Analysis
+</a>
 </div>
 
-  
+<h2 id="2-for-real-this-time-vega-lite-from-vega-specs-to-json-with-altair-in-python">2. For real this time, vega-lite from vega-specs to JSON with Altair in Python.</h2>
+
+<p>Now here is an example of a side-by-side plot (not interactive though):</p>
+
+<vegachart schema-url="/assets/json/license_dashboard.json" style="width: 100%"></vegachart>
+
+<p>I have added some interactivity with a ‘altair.selection_interval’ and ‘tranform_filter’:</p>
+
+<vegachart schema-url="/assets/json/dashboard_of_licenses.json" style="width: 100%"></vegachart>
 
 
-
-
-  <!-- Remote Projects -->
-  
-
-  
-
-  
 </div>
-
-
   </main>
   <footer class="mt-auto py-3 text-center">
 
@@ -135,6 +136,17 @@
 
 </footer>
 
+
+<!-- Custom page specific js files -->
+  
+    <script src='/assets/js/vega.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-lite.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-embed.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/justcharts.js' type="text/javascript"></script>
+  
 
 
 
