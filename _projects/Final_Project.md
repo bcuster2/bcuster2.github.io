@@ -26,7 +26,7 @@ The rect plot shows the explained variance for each principal component (PC), wi
 Additionally, the code includes a scree plot with cumulative variance, represented as both a line and point plot. This plot displays the cumulative amount of explained variance for each PC component, allowing users to identify the optimal number of PCs to include in their analysis.
 Overall, this code is part of a dashboard that enables users to visualize the results of a principal component analysis for both correlated and uncorrelated variables. By using scree plots with cumulative variance, users can determine the optimal number of PCs to include in their analysis, helping to reduce the dimensionality of their data while retaining as much information as possible.
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/Dashboard4.json" style="width: 100%"></vegachart>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/dashboard_secondary.json" style="width: 100%"></vegachart>
 
 
 In contrast, for uncorrelated variables, the eigenvalues and cumulative variance explained are expected to decline at a similar rate as for correlated variables. This is because uncorrelated variables already capture the maximum amount of information, and PCA does not need to remove any redundancy.
